@@ -5,8 +5,8 @@ import { HealthInsuranceBanner } from "./HealthInsuranceBanner";
 
 export const CTA = () => {
   return (
-    <section id="get-started" className="py-20 px-6 md:px-12 lg:px-24 bg-white dark:bg-gray-900">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="get-started" className="py-20 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+      <div className="max-w-4xl mx-auto text-center relative">
         <HealthInsuranceBanner bannerText="Ready to Join" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,9 +22,17 @@ export const CTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link href="/contact" className="w-full sm:w-auto inline-block bg-teal-500 text-white rounded-lg px-8 sm:px-10 py-4 text-lg font-semibold shadow-lg hover:bg-teal-600 transition text-center">
+            <motion.a
+              href="/contact"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+                transition: { duration: 0.2 }
+              }}
+              className="inline-block bg-teal-500 text-white rounded-md px-8 py-4 text-lg font-semibold shadow hover:bg-teal-600 transition-colors duration-200"
+            >
               Get Started Today
-            </Link>
+            </motion.a>
             <Link href="/contact" className="w-full sm:w-auto inline-block border border-teal-500 text-teal-600 dark:text-teal-400 rounded-lg px-8 sm:px-10 py-4 text-lg font-semibold shadow-lg hover:bg-teal-50 dark:hover:bg-gray-800 transition text-center">
               Talk to a Lanchi Agent
             </Link>

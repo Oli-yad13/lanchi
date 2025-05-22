@@ -130,3 +130,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes carousel-slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%); /* Translate by 100% of the original items' total width */
+  }
+}
+
+.animate-carousel-slide {
+  animation: carousel-slide 30s linear infinite;
+}
