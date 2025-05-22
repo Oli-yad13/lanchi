@@ -70,7 +70,7 @@ export const TargetAudience = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
           >
             Who Is Lanchi For?
           </motion.h2>
